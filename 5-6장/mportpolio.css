@@ -1,0 +1,50 @@
+﻿/* 스타일 초기화 */
+* { margin: 0px ; padding: 0px ; }
+header, body, footer { font-size: 14px; font-family: 나눔고딕,굴림,돋음,'Times New Roman',serif; width: 100%; }
+header, footer { text-align : center ;}
+body { margin: auto; background-color: #474e5d; color:white;}
+footer { position: fixed; bottom: 0px; }
+#content {margin-left: 40px;}
+table {text-align: center; width:500px; height: 300px; margin-left: 30px; background: #6f7686;}
+
+th {background: white; color: #6f7686; }
+tr:nth-child(even) {background: white; color: #6f7686;}
+tr:hover {background: #474e; color: white;}
+li {margin: 20px;}
+
+/* 공통 스타일 */
+h1 { padding: 15px; font-size: 30px ; color: #474e5d; background-image: url(bg.jpg); background-repeat: repeat-x;}
+h2 { color: white;}
+footer h2 {font-size: 15px; color:#474e5d;}
+h1, h2 { background-image: url(bg.jpg); background-repeat: repeat-x; }
+.content h2, p {background:white; color:black; padding:5px;}
+.section1 p {background:#474e5d; color:white;}
+.section2 p {color:#474e5d; width: 600px; margin-left: 100px; margin-top: 50px;}
+.content h2 {font-size: 20px;}
+.content p {font-size: 13px;}
+img { border: 0; margin-top: 3px;}
+
+nav { margin: 5px 5px; }
+nav > span > a { font-style: bold; margin: 0 ; padding: 3px; border: 2px solid white; float: right; text-decoration: none; background: white; color: #474e5d; }
+nav > span > a:hover { background: #6f7686; color: white; }
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+	section { width: 80%; float: left; }
+	aside { width: 20%; text-align: center; float: right; }
+	footer { clear: both; }
+}
+.content  { clear: both; }
+.section1 ul li { list-style-position: inside; list-style-image: url("li.jpg"); }
+
+/* mintro.html 적용 스타일 */
+#stu-pic { width: 10em; height: 12em; float: left; border: 0; margin-top: 30px; margin-right: 40px; margin-left: 20px;}
+
+/* mstudy.html 적용 스타일 */
+video { margin: 5px; width: 300px; height: 200px; }
+
+/* mcareer.html 적용 스타일 */
+.semi-pic { width: 4em; height: 3em;  }
+#pic-container { overflow: hidden; }
+#pic-container:hover { height: 220px; }
+#pic1:hover { -webkit-transform: translate(150px,50px) scale(7,7); transform: scale(0.5); }
+#pic2:hover { -webkit-transform: translate(100px,50px) scale(7,7) ; transform: scale(0.5); }
+#pic3:hover { -webkit-transform: translate(30px,50px) scale(7,7); transform: scale(0.5); }
