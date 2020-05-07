@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).bind("mobileinit", function () {
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
+            $.mobile.pushStateEnabled = false;
+        });
+    </script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        #a {
+            list-style: none;
+        }
+
+        .picture {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .picture li {
+            float: left;
+            width: 50%;
+        }
+
+        .picture li a {
+            display: block;
+            margin: 5px;
+            border: 1px
+        }
+
+        .picture li img {
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+
+        .picture li img:hover {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 80%;
+            border-top: 1px solid white;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-theme="b">
+        <div data-role="page" id="home">
+            <div data-role="header" data-theme="b">
+                <h1>소개 앱</h1>
+            </div>
+            <div data-role="content" style="text-align:center">
+                <ul data-role="listview" data-inset="true">
+                    <li id="a"><a href="#intro">내 소개</a></li>
+                    <li id="a"><a href="#movie" data-rel="dialog">내 영상</a></li>
+                    <li id="a"><a href="#wizard3-1" data-rel="dialog">내 음성</a></li>
+                    <li id="a"><a href="#gallery">내 사진</a></li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h1>201632027-장예지</h1>
+            </div>
+        </div>
+
+        <div data-role="page" id="intro" data-theme="b">
+            <div data-role="header" data-theme="b">
+                <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+                <h1>내 소개</h1>
+            </div>
+            <div data-role="content">
+                <div data-role="collapsible">
+                    <h3>학력</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>졸업년도</th>
+                                <th>지역</th>
+                                <th>출신학교</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2010. 2</td>
+                                <td>인천광역시</td>
+                                <td>개흥초등학교 졸업</td>
+                            </tr>
+                            <tr>
+                                <td>2013. 2.</td>
+                                <td>인천광역시</td>
+                                <td>부광중학교 졸업</td>
+                            </tr>
+                            <tr>
+                                <td>2016. 2.</td>
+                                <td>인천광역시</td>
+                                <td>안남고등학교 졸업</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>서울특별시</td>
+                                <td>소프트웨어공학과 재학중</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div data-role="collapsible">
+                        <h3>경력</h3>
+                        <div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+                            <div data-role="collapsible" data-collapsed="false">
+                                <h3>교과</h3>
+                                <div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+                                    <div data-role="collapsible" data-collapsed="false">
+                                        <h3>2020-1</h3>
+                                        <ul>
+                                            <li>소프트웨어 캡스톤디자인</li>
+                                            <li>졸업지도</li>
+                                            <li>프론트엔드 개발</li>
+                                            <li>하이브리드 앱 프로그래밍</li>
+                                        </ul>
+                                    </div>
+                                    <div data-role="collapsible">
+                                        <h3>2018-2</h3>
+                                        <ul>
+                                            <li>노래로 보는 한국사회</li>
+                                            <li>취업전략 및 역량강화 II</li>
+                                            <li>데이터베이스 캡스톤디자인</li>
+                                            <li>고급웹프로그래밍 II</li>
+                                            <li>과정지도6</li>
+                                            <li>모바일 프로그래밍</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-role="collapsible">
+                                <h3>비교과</h3>
+                                <h3>활동 내역</h3>
+                                <ul>
+                                    <li>한솥밥 튜터링</li>
+                                    <li>어울림</li>
+                                    <li>학습법 워크숍</li>
+                                    <li>제4회 성공회대학교 입사서류컨테스트</li>
+                                    <li>2016학년 1학기 제12대 소프트웨어공학과 학생회 SWAG 실무부원</li>
+                                    <li>2016학년 2학기 제13대 소프트웨어공학과 학생회 늘솜 실무부장</li>
+                                    <li>2017학년 1학기 제14대 소프트웨어공학과 학생회 새침 실무부장</li>
+                                    <li>2018학년 동아리 개발자들 실무부장</li>
+                                    <li>2018학년 2학기 학과 TA 장학생</li>
+                                    <li>2018 SKHU START-UP FESTIVAL</li>
+                                </ul>
+                                <h3>수상 내역</h3>
+                                <ul>
+                                    <li>제11회 소프트웨어공학과 경진 대회 - 대상</li>
+                                    <li>제10회 IT&미디어컨텐츠 경진대회 - 대상</li>
+                                </ul>
+                                <h3>사회봉사활동 내역</h3>
+                                <ul>
+                                    <li>2017 시각장애인을 위한 도서입력봉사</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h1>201632027-장예지</h1>
+            </div>
+        </div>
+
+        <div data-role="page" id="movie" data-theme="b">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <h1>내 영상</h1>
+            </div>
+            <div data-role="content">
+                <div class="ui-bar ui-bar-e">정세운 idontwannabeyouanymore 커버 영상</div><br />
+                <li id="a"><video controls width="100%" preload="metadata">
+                        <source src="sewoon1.mp4" type="video/mp4">
+                    </video></li><br />
+                <div class="ui-bar ui-bar-e">정세운 Best Part 커버 영상</div><br />
+                <li id="a"><video controls width="100%" preload="metadata">
+                        <source src="sewoon2.mp4" type="video/mp4">
+                    </video></li>
+            </div>
+            <div data-role="footer" data-theme="b">
+            </div>
+        </div>
+
+        <div data-role="page" id="wizard3-1">
+            <div data-role="header">
+                <h1>내 음성</h1>
+            </div>
+            <div data-role="content">
+                <div class="ui-bar ui-bar-e">소개 음성</div><br />
+                <audio controls width="100%" preload="metadata">
+                    <source src="int.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+
+        <div data-role="page" id="gallery" data-theme="b">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+                <h1>갤러리</h1>
+            </div>
+            <div data-role="content">
+                <ul class="picture">
+                    <li><a href="1.jpg" rel="external"><img src="1.jpg" /></a></li>
+                    <li><a href="5.jpg" rel="external"><img src="5.jpg" /></a></li>
+                    <li><a href="2.jpg" rel="external"><img src="2.jpg" /></a></li>
+                    <li><a href="6.jpg" rel="external"><img src="6.jpg" /></a></li>
+                    <li><a href="3.jpg" rel="external"><img src="3.jpg" /></a></li>
+                    <li><a href="7.jpg" rel="external"><img src="7.jpg" /></a></li>
+                    <li><a href="4.jpg" rel="external"><img src="4.jpg" /></a></li>
+                    <li><a href="8.jpg" rel="external"><img src="8.jpg" /></a></li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h1>201632027-장예지</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
