@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body * {
+            margin: 5px;
+            padding: 5px;
+            border: solid thin gray;
+        }
+
+        .u_border {
+            border-width: thick;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('body').click(function () {
+                $('.u_bg').css('background-color', 'yellow');
+                $('p:eq(2)').addClass('u_border');
+                $('div').find('*:nth-child(even)').text('33333');
+                $('p:last').html($('div:eq(0)').html());
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div>박스1
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <div>박스2
+        <p>AAA</p>
+        <p class='u_bg'>BBB</p>
+        <p>CCC</p>
+    </div>
+</body>
+
+</html>
